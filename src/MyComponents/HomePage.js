@@ -90,10 +90,11 @@ export default function AVTech() {
           autoPlay 
           muted 
           loop 
-          className="hero-video"
+          className="hero-video slow-video"
           poster="/hero2222.jpg"
+          playsInline
         >
-          <source src="/main hero.mp4" type="video/mp4" />
+          <source src="/HeroFinal.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="hero-overlay"></div>
@@ -150,7 +151,7 @@ export default function AVTech() {
         <div className="hero-content d-flex align-items-center min-vh-100">
           <div className="container">
             <div className="row justify-content-center text-center">
-              <div className="col-lg-8">
+              <div className="col-lg-8 text-over-video">
                 <h1 className="display-2 fw-bold mb-4 fade-in-up bright-text">
                   Transform Your <span className="gradient-text glow-text">Digital Vision</span>
                 </h1>
@@ -177,7 +178,8 @@ export default function AVTech() {
           autoPlay 
           muted 
           loop 
-          className="video-bg"
+          className="video-bg slow-video"
+          playsInline
         >
           <source src="/Hero1111.mp4" type="video/mp4" />
           Your browser does not support the video tag.
@@ -186,7 +188,7 @@ export default function AVTech() {
         
         <div className="section-content">
           <div className="container">
-            <div className="text-center mb-5">
+            <div className="text-center mb-5 text-over-video">
               <h2 className="display-3 fw-bold mb-3 gradient-text glow-text">Our Digital Products</h2>
               <p className="lead fs-4 bright-text">Premium solutions for your digital success</p>
             </div>
@@ -236,7 +238,8 @@ export default function AVTech() {
           autoPlay 
           muted 
           loop 
-          className="video-bg"
+          className="video-bg slow-video"
+          playsInline
         >
           <source src="/banner.mp4" type="video/mp4" />
           Your browser does not support the video tag.
@@ -245,7 +248,7 @@ export default function AVTech() {
         
         <div className="section-content">
           <div className="container">
-            <div className="text-center mb-5">
+            <div className="text-center mb-5 text-over-video">
               <h2 className="display-3 fw-bold mb-3 gradient-text glow-text">Our Services</h2>
               <p className="lead fs-4 bright-text">Comprehensive digital solutions for your business</p>
             </div>
@@ -294,7 +297,7 @@ export default function AVTech() {
         <div className="contact-content">
           <div className="container">
             <div className="row justify-content-center text-center">
-              <div className="col-lg-8">
+              <div className="col-lg-8 text-over-video">
                 <h2 className="display-3 fw-bold mb-4 bright-text">Ready to Start?</h2>
                 <p className="lead mb-5 fs-4 bright-text">
                   Let's discuss your project and create something amazing together. 
