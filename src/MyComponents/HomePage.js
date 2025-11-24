@@ -94,7 +94,7 @@ export default function AVTech() {
           poster="/hero2222.jpg"
           playsInline
         >
-          <source src="/HeroFinal.mp4" type="video/mp4" />
+          <source src="/FinalEarth.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="hero-overlay"></div>
@@ -153,7 +153,7 @@ export default function AVTech() {
             <div className="row justify-content-center text-center">
               <div className="col-lg-8 text-over-video">
                 <h1 className="display-2 fw-bold mb-4 fade-in-up bright-text">
-                  Transform Your <span className="gradient-text glow-text">Digital Vision</span>
+                  Transform Your Digital Vision
                 </h1>
                 <p className="lead mb-5 fade-in-up fs-4 bright-text" style={{animationDelay: '0.2s'}}>
                   We create stunning digital experiences that captivate your audience and drive business growth
