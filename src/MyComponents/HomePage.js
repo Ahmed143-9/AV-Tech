@@ -102,14 +102,15 @@ export default function AVTech() {
         {/* Fixed Navbar */}
         <nav className={`navbar navbar-expand-lg navbar-dark fixed-top ${scrolled ? 'navbar-blur' : 'bg-transparent'} transition-all`}>
           <div className="container">
-            {/* Logo with LOGO.png */}
+            {/* Logo with circular container */}
             <a className="navbar-brand d-flex align-items-center" href="#">
-              <img 
-                src="/LOGO.png" 
-                alt="AVTech" 
-                height="50" 
-                className="me-2 logo-img"
-              />
+              <div className="logo-container me-2">
+                <img 
+                  src="/AVlogo.jpg" 
+                  alt="AVTech" 
+                  className="logo-img"
+                />
+              </div>
               <span className="gradient-text fw-bold fs-3 glow-text">AVTech</span>
             </a>
 
