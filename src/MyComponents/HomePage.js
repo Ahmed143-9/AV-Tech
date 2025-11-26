@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './HomePage.css';
 
 export default function AVTech() {
@@ -40,7 +41,7 @@ export default function AVTech() {
         <nav className={`navbar navbar-expand-lg navbar-dark fixed-top ${scrolled ? 'navbar-blur' : 'bg-transparent'} transition-all`}>
           <div className="container">
             {/* Logo with circular container */}
-            <a className="navbar-brand d-flex align-items-center" href="#">
+            <Link to="/" className="navbar-brand d-flex align-items-center">
               <div className="logo-container me-2">
                 <img 
                   src="/AVlogo.jpg" 
@@ -49,7 +50,7 @@ export default function AVTech() {
                 />
               </div>
               <span className="gradient-text fw-bold fs-3 glow-text">AVTech</span>
-            </a>
+            </Link>
 
             {/* Mobile Menu Button */}
             <button 
@@ -64,7 +65,7 @@ export default function AVTech() {
             <div className={`collapse navbar-collapse ${isMenuOpen ? 'show' : ''}`}>
               <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                  <a className="nav-link active fw-bold text-white fs-5 bright-text" href="#">Home</a>
+                  <Link to="/" className="nav-link active fw-bold text-white fs-5 bright-text">Home</Link>
                 </li>
                 <li className="nav-item">
                   <a className="nav-link fw-bold text-white fs-5 bright-text" href="#products">Products</a>
@@ -72,6 +73,9 @@ export default function AVTech() {
                 <li className="nav-item">
                   <a className="nav-link fw-bold text-white fs-5 bright-text" href="#services">Services</a>
                 </li>
+                {/* <li className="nav-item">
+                  <Link to="/portfolio" className="nav-link fw-bold text-white fs-5 bright-text">Our Work</Link>
+                </li> */}
                 <li className="nav-item">
                   <a className="nav-link fw-bold text-white fs-5 bright-text" href="#contact">Contact</a>
                 </li>
@@ -97,9 +101,9 @@ export default function AVTech() {
                   We create stunning digital experiences that captivate your audience and drive business growth
                 </p>
                 <div className="fade-in-up" style={{animationDelay: '0.4s'}}>
-                  <button className="btn gradient-bg text-white btn-lg px-5 py-3 rounded-pill me-3 glow float">
+                  <Link to="/portfolio" className="btn gradient-bg text-white btn-lg px-5 py-3 rounded-pill me-3 glow float">
                     View Our Work
-                  </button>
+                  </Link>
                   <button className="btn btn-outline-light btn-lg px-5 py-3 rounded-pill float">
                     Learn More
                   </button>
