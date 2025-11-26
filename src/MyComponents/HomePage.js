@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+  // import { useNavigate } from "react-router-dom";
 import './HomePage.css';
 
 export default function AVTech() {
@@ -10,6 +11,14 @@ export default function AVTech() {
  
 
   // Services data
+
+
+
+const navigate = useNavigate();
+
+const goToSection = (sectionId) => {
+    navigate("/portfolio", { state: { scrollTo: sectionId } });
+  };
  
   // Scroll effect for navbar
   useEffect(() => {
@@ -67,18 +76,37 @@ export default function AVTech() {
                 <li className="nav-item">
                   <Link to="/" className="nav-link active fw-bold text-white fs-5 bright-text">Home</Link>
                 </li>
-                <li className="nav-item">
-                  <a className="nav-link fw-bold text-white fs-5 bright-text" href="#products">Products</a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link fw-bold text-white fs-5 bright-text" href="#services">Services</a>
-                </li>
+                  <li className="nav-item">
+          <button
+            onClick={() => goToSection("products")}
+            className="nav-link active fw-bold text-white fs-5 bright-text"
+            style={{ background: "none", border: "none" }}
+          >
+            Products
+          </button>
+        </li>
+             <li className="nav-item">
+          <button
+            onClick={() => goToSection("services")}
+            className="nav-link fw-bold text-white fs-5 bright-text"
+            style={{ background: "none", border: "none" }}
+          >
+            Services
+          </button>
+        </li>
+
                 {/* <li className="nav-item">
                   <Link to="/portfolio" className="nav-link fw-bold text-white fs-5 bright-text">Our Work</Link>
                 </li> */}
-                <li className="nav-item">
-                  <a className="nav-link fw-bold text-white fs-5 bright-text" href="#contact">Contact</a>
-                </li>
+               <li className="nav-item">
+          <button
+            onClick={() => goToSection("contact")}
+            className="nav-link fw-bold text-white fs-5 bright-text"
+            style={{ background: "none", border: "none" }}
+          >
+            Contact
+          </button>
+        </li>
                 <li className="nav-item ms-3">
                   <button className="btn gradient-bg text-white px-4 py-2 rounded-pill pulse fw-bold">
                     Get Started
@@ -104,9 +132,9 @@ export default function AVTech() {
                   <Link to="/portfolio" className="btn gradient-bg text-white btn-lg px-5 py-3 rounded-pill me-3 glow float">
                     View Our Work
                   </Link>
-                  <button className="btn btn-outline-light btn-lg px-5 py-3 rounded-pill float">
+                  {/* <button className="btn btn-outline-light btn-lg px-5 py-3 rounded-pill float">
                     Learn More
-                  </button>
+                  </button> */}
                 </div>
               </div>
             </div>
