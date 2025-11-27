@@ -126,11 +126,11 @@ const goToSection = (sectionId) => {
                   Transform Your Digital Vision
                 </h1>
                 <p className="lead mb-5 fade-in-up fs-4 bright-text" style={{animationDelay: '0.2s'}}>
-                  We create stunning digital experiences that captivate your audience and drive business growth
+                  “Global talent hub for any task — we promise quality and on-time delivery.”
                 </p>
                 <div className="fade-in-up" style={{animationDelay: '0.4s'}}>
                   <Link to="/portfolio" className="btn gradient-bg text-white btn-lg px-5 py-3 rounded-pill me-3 glow float">
-                    View Our Work
+                    Explore
                   </Link>
                   {/* <button className="btn btn-outline-light btn-lg px-5 py-3 rounded-pill float">
                     Learn More
