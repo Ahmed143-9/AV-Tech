@@ -54,7 +54,7 @@ export default function AVTech() {
             <Link to="/" className="navbar-brand d-flex align-items-center" onClick={closeMenu}>
               <div className="logo-container me-2">
                 <img 
-                  src="/AVlogo.jpg" 
+                  src="/AV LOGO FINAL.png" 
                   alt="AVTech" 
                   className="logo-img"
                 />
@@ -109,9 +109,15 @@ export default function AVTech() {
                   </button>
                 </li>
                 <li className="nav-item ms-3">
-                  <button className="btn gradient-bg text-white px-4 py-2 rounded-pill pulse fw-bold" onClick={closeMenu}>
+                  <a
+                    href="https://forms.gle/HgEvF1g6zW8tMq1e9"
+                    className="btn gradient-bg text-white px-4 py-2 rounded-pill pulse fw-bold"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={closeMenu}
+                  >
                     Get Started
-                  </button>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -127,7 +133,7 @@ export default function AVTech() {
                   Transform Your Digital Vision
                 </h1>
                 <p className="lead mb-5 fade-in-up fs-4 bright-text" style={{animationDelay: '0.2s'}}>
-                  "Global talent hub for any task — we promise quality and on-time delivery."
+                  "Global talent hub for any task. We promise quality and on-time delivery."
                 </p>
                 <div className="fade-in-up" style={{animationDelay: '0.4s'}}>
                   <Link to="/portfolio" className="btn gradient-bg text-white btn-lg px-5 py-3 rounded-pill me-3 glow float" onClick={closeMenu}>

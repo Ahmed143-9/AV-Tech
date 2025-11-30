@@ -65,7 +65,7 @@ export default function HomePage() {
     const whatsappMessage = `*New Message from AV Tech Website*%0A%0A*Name:* ${name}%0A*Email:* ${email}%0A*Message:* ${message}%0A%0A_This message was sent from AV Tech website contact form_`;
     
     // WhatsApp API URL
-    const whatsappUrl = `https://wa.me/8801958483962?text=${whatsappMessage}`;
+    const whatsappUrl = `https://wa.me/+8801958483962?text=${whatsappMessage}`;
     
     // Open WhatsApp in new tab
     window.open(whatsappUrl, '_blank');
@@ -528,9 +528,9 @@ export default function HomePage() {
                 <i className="fas fa-envelope"></i>
               </div>
               <h3 className="h5 fw-bold text-dark mb-2">Email Us</h3>
-              <p className="text-muted">infouias25@gmail.com</p>
+              <p className="text-muted">avtechkm@gmail.com</p>
               <a 
-                href="mailto:infouias25@gmail.com" 
+                href="mailto:avtechkm@gmail.com" 
                 className="btn btn-outline-primary btn-sm mt-2"
               >
                 <i className="fas fa-envelope me-1"></i>
@@ -591,7 +591,7 @@ export default function HomePage() {
                 </p>
                 <p className="mb-2">
                   <i className="fas fa-envelope me-2"></i>
-                  infouias25@gmail.com
+                  avtechkm@gmail.com
                 </p>
               </div>
             </div>
