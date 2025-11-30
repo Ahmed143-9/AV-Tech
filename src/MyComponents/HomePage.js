@@ -1,15 +1,23 @@
+// src/MyComponents/HomePage.js
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './HomePage.css';
 
+// Import Admin Components
+import EditableText from '../components/Admin/EditableText';
+import { useContent } from '../context/ContentContext';
+
 export default function AVTech() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  
+  // Get content from context
+  const { content } = useContent();
 
   const navigate = useNavigate();
 
   const goToSection = (sectionId) => {
-    setIsMenuOpen(false); // Close menu when navigating
+    setIsMenuOpen(false);
     navigate("/portfolio", { state: { scrollTo: sectionId } });
   };
 
@@ -59,7 +67,11 @@ export default function AVTech() {
                   className="logo-img"
                 />
               </div>
-              <span className="gradient-text fw-bold fs-3 glow-text">AVTech</span>
+              <span className="gradient-text fw-bold fs-3 glow-text">
+                <EditableText section="branding" field="companyName">
+                  {content.branding?.companyName || "AVTech"}
+                </EditableText>
+              </span>
             </Link>
 
             {/* Mobile Menu Button */}
@@ -116,7 +128,9 @@ export default function AVTech() {
                     rel="noopener noreferrer"
                     onClick={closeMenu}
                   >
-                    Get Started
+                    <EditableText section="hero" field="ctaButton">
+                      {content.hero?.ctaButton || "Get Started"}
+                    </EditableText>
                   </a>
                 </li>
               </ul>
@@ -124,20 +138,26 @@ export default function AVTech() {
           </div>
         </nav>
 
-        {/* Hero Content */}
+        {/* Hero Content - ALL EDITABLE */}
         <div className="hero-content d-flex align-items-center min-vh-100">
           <div className="container">
             <div className="row justify-content-center text-center">
               <div className="col-lg-8 text-over-video">
                 <h1 className="display-2 fw-bold mb-4 fade-in-up bright-text">
-                  Transform Your Digital Vision
+                  <EditableText section="hero" field="title" multiline={false}>
+                    {content.hero?.title || "Transform Your Digital Vision"}
+                  </EditableText>
                 </h1>
                 <p className="lead mb-5 fade-in-up fs-4 bright-text" style={{animationDelay: '0.2s'}}>
-                  "Global talent hub for any task. We promise quality and on-time delivery."
+                  <EditableText section="hero" field="subtitle" multiline={true}>
+                    {content.hero?.subtitle || "Global talent hub for any task. We promise quality and on-time delivery."}
+                  </EditableText>
                 </p>
                 <div className="fade-in-up" style={{animationDelay: '0.4s'}}>
                   <Link to="/portfolio" className="btn gradient-bg text-white btn-lg px-5 py-3 rounded-pill me-3 glow float" onClick={closeMenu}>
-                    Explore
+                    <EditableText section="hero" field="exploreButton">
+                      {content.hero?.exploreButton || "Explore"}
+                    </EditableText>
                   </Link>
                 </div>
               </div>
